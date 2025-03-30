@@ -1,0 +1,7 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://d03x7xuxv1fo5"]
+
+[ext_resource type="FontFile" uid="uid://diiitpdhsqoin" path="res://fonts/arial.ttf" id="1_m0ihf"]
+
+[resource]
+base_font = ExtResource("1_m0ihf")
+variation_transform = Transform2D(0.8, 0, 0, 0.8, 0, 0)

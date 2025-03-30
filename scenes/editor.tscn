@@ -1,0 +1,656 @@
+[gd_scene load_steps=22 format=3 uid="uid://cagyyl3prh2y4"]
+
+[ext_resource type="Script" uid="uid://df3qp40l8087b" path="res://scripts/GridDrawer.cs" id="1_b1cmn"]
+[ext_resource type="Script" uid="uid://cp0qkir2730kc" path="res://scripts/DrawerGroup.cs" id="1_pxqd5"]
+[ext_resource type="Script" uid="uid://bgv2xc7rmtpod" path="res://scripts/managers/InputManager.cs" id="3_ba0ut"]
+[ext_resource type="Script" uid="uid://kehov44mfkvi" path="res://scripts/CursorDrawer.cs" id="3_q68jb"]
+[ext_resource type="Script" uid="uid://bofvylg74yq1j" path="res://scripts/NoteDrawer.cs" id="3_xg7d5"]
+[ext_resource type="AudioStream" uid="uid://cqchcl5siemkj" path="res://sounds/hit_sound/normal/hit_kick.wav" id="6_aa8l6"]
+[ext_resource type="AudioStream" uid="uid://cjsmx5x3oagh8" path="res://sounds/hit_sound/normal/hit_snare.wav" id="7_k1sck"]
+[ext_resource type="Script" uid="uid://igfsaqc6y5yu" path="res://scripts/managers/SyncTimeSystem.cs" id="8_o435n"]
+[ext_resource type="Script" uid="uid://dunnrl2l720qh" path="res://scripts/Menubar.cs" id="12_78fwb"]
+[ext_resource type="Script" uid="uid://ruk6mx11gv5c" path="res://scripts/DenominatorModifier.cs" id="13_74j0u"]
+[ext_resource type="Script" uid="uid://6cfl71m430ff" path="res://scripts/BarTeleportation.cs" id="14_sdh1e"]
+[ext_resource type="Script" uid="uid://cac174hg6267d" path="res://scripts/note_edit/HitNoteEdit.cs" id="15_2w0at"]
+[ext_resource type="Texture2D" uid="uid://cmn64slkpge82" path="res://img/NormalShidunzi.png" id="16_0u1f5"]
+[ext_resource type="Script" uid="uid://6y2oillnsc01" path="res://scripts/managers/NoteEditManager.cs" id="16_5tdu1"]
+[ext_resource type="Texture2D" uid="uid://dw4fgknl0q67n" path="res://img/GoldShidunzi.png" id="17_8g6du"]
+[ext_resource type="Script" uid="uid://cmf37a3dnrxu3" path="res://scripts/managers/TipManager.cs" id="18_8g6du"]
+[ext_resource type="Script" uid="uid://tm6anpag45e6" path="res://scripts/note_edit/BPMNoteEdit.cs" id="18_aa8l6"]
+[ext_resource type="Script" uid="uid://dhv0gr836me48" path="res://scripts/AudioSettings.cs" id="19_aa8l6"]
+[ext_resource type="Script" uid="uid://dh38mr56mxj5p" path="res://scripts/note_edit/BKGNoteEdit.cs" id="19_k1sck"]
+[ext_resource type="Texture2D" uid="uid://be42t3w0ensqv" path="res://img/Icons/Reset.png" id="20_k1sck"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sdh1e"]
+bg_color = Color(0, 0, 0, 0.447059)
+
+[node name="MainScene" type="Node2D"]
+
+[node name="DrawerGroup" type="CanvasGroup" parent="."]
+fit_margin = 1024.0
+script = ExtResource("1_pxqd5")
+
+[node name="GridDrawer" type="Control" parent="DrawerGroup"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 25.0
+offset_top = 75.0
+offset_right = 375.0
+offset_bottom = 595.0
+script = ExtResource("1_b1cmn")
+
+[node name="NoteDrawer" type="Control" parent="DrawerGroup"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_xg7d5")
+
+[node name="CursorDrawer" type="Control" parent="DrawerGroup"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_q68jb")
+
+[node name="DEBUG_LABEL" type="Label" parent="."]
+text = "Welcome to Rock Chart Editor!"
+
+[node name="MediaPlayers" type="Node" parent="."]
+
+[node name="BGMPlayer" type="AudioStreamPlayer" parent="MediaPlayers"]
+
+[node name="SEPlayerNormal" type="AudioStreamPlayer" parent="MediaPlayers"]
+stream = ExtResource("6_aa8l6")
+
+[node name="SEPlayerGold" type="AudioStreamPlayer" parent="MediaPlayers"]
+stream = ExtResource("7_k1sck")
+volume_db = -1.0
+
+[node name="BGAPlayer" type="VideoStreamPlayer" parent="MediaPlayers"]
+offset_left = 197.0
+offset_top = 20.0
+offset_right = 237.0
+offset_bottom = 60.0
+
+[node name="MenuBar" type="MenuBar" parent="."]
+offset_left = 953.0
+offset_top = 4.0
+offset_right = 1153.0
+offset_bottom = 35.0
+script = ExtResource("12_78fwb")
+
+[node name="File" type="PopupMenu" parent="MenuBar"]
+size = Vector2i(134, 100)
+item_count = 2
+item_0/text = "Load from .sdz"
+item_0/id = 0
+item_1/text = "Save as .sdz"
+item_1/id = 1
+
+[node name="Edit" type="PopupMenu" parent="MenuBar"]
+auto_translate_mode = 1
+size = Vector2i(156, 100)
+item_count = 1
+item_0/text = "Settings"
+item_0/id = 0
+
+[node name="Chart" type="PopupMenu" parent="MenuBar"]
+size = Vector2i(156, 100)
+item_count = 1
+item_0/text = "Modify Chart Info"
+item_0/id = 0
+
+[node name="About" type="PopupMenu" parent="MenuBar"]
+auto_translate_mode = 1
+size = Vector2i(156, 100)
+item_count = 2
+item_0/text = "Github"
+item_0/id = 0
+item_1/text = "About"
+item_1/id = 1
+
+[node name="DenominatorModifier" type="Node" parent="."]
+script = ExtResource("13_74j0u")
+
+[node name="Label" type="Label" parent="DenominatorModifier"]
+offset_left = 481.0
+offset_top = 5.0
+offset_right = 594.0
+offset_bottom = 28.0
+text = "Denominator="
+
+[node name="LineEdit" type="LineEdit" parent="DenominatorModifier"]
+offset_left = 601.0
+offset_top = 3.0
+offset_right = 670.0
+offset_bottom = 34.0
+text = "4"
+alignment = 1
+
+[node name="BarTeleportation" type="Node" parent="."]
+script = ExtResource("14_sdh1e")
+
+[node name="Label" type="Label" parent="BarTeleportation"]
+offset_left = 481.0
+offset_top = 50.0
+offset_right = 558.0
+offset_bottom = 73.0
+text = "Go to Bar:"
+
+[node name="LineEdit" type="LineEdit" parent="BarTeleportation"]
+offset_left = 566.0
+offset_top = 48.0
+offset_right = 634.563
+offset_bottom = 79.0
+text = "0"
+alignment = 1
+
+[node name="Button" type="Button" parent="BarTeleportation"]
+offset_left = 643.0
+offset_top = 48.0
+offset_right = 680.0
+offset_bottom = 79.0
+focus_mode = 0
+text = "GO!"
+
+[node name="NoteEdits" type="Node" parent="."]
+
+[node name="HitNotePanel" type="PanelContainer" parent="NoteEdits"]
+visible = false
+offset_left = 738.0
+offset_top = 52.0
+offset_right = 1140.0
+offset_bottom = 357.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_sdh1e")
+script = ExtResource("15_2w0at")
+
+[node name="HitNoteEditContainer" type="VBoxContainer" parent="NoteEdits/HitNotePanel"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NoteEdits/HitNotePanel/HitNoteEditContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Hit Note Properties"
+horizontal_alignment = 1
+
+[node name="Position" type="Control" parent="NoteEdits/HitNotePanel/HitNoteEditContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NoteEdits/HitNotePanel/HitNoteEditContainer/Position"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 2.0
+offset_right = 84.0
+offset_bottom = 25.0
+text = "Position:"
+
+[node name="LineEdit" type="LineEdit" parent="NoteEdits/HitNotePanel/HitNoteEditContainer/Position"]
+layout_mode = 0
+offset_left = 92.0
+offset_top = -1.0
+offset_right = 160.563
+offset_bottom = 30.0
+placeholder_text = "Bar"
+
+[node name="LineEdit2" type="LineEdit" parent="NoteEdits/HitNotePanel/HitNoteEditContainer/Position"]
+layout_mode = 0
+offset_left = 189.0
+offset_top = -1.0
+offset_right = 334.0
+offset_bottom = 30.0
+placeholder_text = "Fraction"
+
+[node name="Label2" type="Label" parent="NoteEdits/HitNotePanel/HitNoteEditContainer/Position"]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 3.0
+offset_right = 211.0
+offset_bottom = 26.0
+text = ":"
+
+[node name="Track" type="Control" parent="NoteEdits/HitNotePanel/HitNoteEditContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NoteEdits/HitNotePanel/HitNoteEditContainer/Track"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 2.0
+offset_right = 85.0
+offset_bottom = 25.0
+text = "Track:"
+
+[node name="LineEdit" type="LineEdit" parent="NoteEdits/HitNotePanel/HitNoteEditContainer/Track"]
+layout_mode = 0
+offset_left = 92.0
+offset_top = -1.0
+offset_right = 160.563
+offset_bottom = 30.0
+placeholder_text = "Track"
+
+[node name="Count" type="Control" parent="NoteEdits/HitNotePanel/HitNoteEditContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NoteEdits/HitNotePanel/HitNoteEditContainer/Count"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 2.0
+offset_right = 84.0
+offset_bottom = 25.0
+text = "Count:"
+
+[node name="LineEdit" type="LineEdit" parent="NoteEdits/HitNotePanel/HitNoteEditContainer/Count"]
+layout_mode = 0
+offset_left = 91.0
+offset_top = -1.0
+offset_right = 159.563
+offset_bottom = 30.0
+placeholder_text = "Count"
+
+[node name="RemoveCount" type="Control" parent="NoteEdits/HitNotePanel/HitNoteEditContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NoteEdits/HitNotePanel/HitNoteEditContainer/RemoveCount"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 2.0
+offset_right = 135.0
+offset_bottom = 25.0
+text = "Remove Count:"
+
+[node name="LineEdit" type="LineEdit" parent="NoteEdits/HitNotePanel/HitNoteEditContainer/RemoveCount"]
+layout_mode = 0
+offset_left = 152.0
+offset_top = -1.0
+offset_right = 220.563
+offset_bottom = 30.0
+placeholder_text = "Count"
+
+[node name="Scale" type="Control" parent="NoteEdits/HitNotePanel/HitNoteEditContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NoteEdits/HitNotePanel/HitNoteEditContainer/Scale"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 2.0
+offset_right = 83.0
+offset_bottom = 25.0
+text = "Scale:"
+
+[node name="LineEdit" type="LineEdit" parent="NoteEdits/HitNotePanel/HitNoteEditContainer/Scale"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = -1.0
+offset_right = 143.563
+offset_bottom = 30.0
+placeholder_text = "Scale"
+
+[node name="Type" type="Control" parent="NoteEdits/HitNotePanel/HitNoteEditContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NoteEdits/HitNotePanel/HitNoteEditContainer/Type"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 2.0
+offset_right = 83.0
+offset_bottom = 25.0
+text = "Type:"
+
+[node name="LineEdit" type="OptionButton" parent="NoteEdits/HitNotePanel/HitNoteEditContainer/Type"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = -5.0
+offset_right = 191.0
+offset_bottom = 33.0
+item_count = 2
+popup/item_0/text = "Normal"
+popup/item_0/icon = ExtResource("16_0u1f5")
+popup/item_0/id = 0
+popup/item_1/text = "Gold"
+popup/item_1/icon = ExtResource("17_8g6du")
+popup/item_1/id = 1
+
+[node name="YOffset" type="Control" parent="NoteEdits/HitNotePanel/HitNoteEditContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NoteEdits/HitNotePanel/HitNoteEditContainer/YOffset"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 2.0
+offset_right = 84.0
+offset_bottom = 25.0
+text = "Y Offset:"
+
+[node name="LineEdit" type="LineEdit" parent="NoteEdits/HitNotePanel/HitNoteEditContainer/YOffset"]
+layout_mode = 0
+offset_left = 91.0
+offset_top = -1.0
+offset_right = 159.563
+offset_bottom = 30.0
+placeholder_text = "YOffset"
+
+[node name="BPMNotePanel" type="PanelContainer" parent="NoteEdits"]
+visible = false
+offset_left = 738.0
+offset_top = 52.0
+offset_right = 1140.0
+offset_bottom = 188.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_sdh1e")
+script = ExtResource("18_aa8l6")
+
+[node name="BPMNoteEditContainer" type="VBoxContainer" parent="NoteEdits/BPMNotePanel"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NoteEdits/BPMNotePanel/BPMNoteEditContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "BPM Note Properties"
+horizontal_alignment = 1
+
+[node name="Position" type="Control" parent="NoteEdits/BPMNotePanel/BPMNoteEditContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NoteEdits/BPMNotePanel/BPMNoteEditContainer/Position"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 2.0
+offset_right = 84.0
+offset_bottom = 25.0
+text = "Position:"
+
+[node name="LineEdit" type="LineEdit" parent="NoteEdits/BPMNotePanel/BPMNoteEditContainer/Position"]
+layout_mode = 0
+offset_left = 92.0
+offset_top = -1.0
+offset_right = 160.563
+offset_bottom = 30.0
+placeholder_text = "Bar"
+
+[node name="LineEdit2" type="LineEdit" parent="NoteEdits/BPMNotePanel/BPMNoteEditContainer/Position"]
+layout_mode = 0
+offset_left = 189.0
+offset_top = -1.0
+offset_right = 334.0
+offset_bottom = 30.0
+placeholder_text = "Fraction"
+
+[node name="Label2" type="Label" parent="NoteEdits/BPMNotePanel/BPMNoteEditContainer/Position"]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 3.0
+offset_right = 211.0
+offset_bottom = 26.0
+text = ":"
+
+[node name="BPMValue" type="Control" parent="NoteEdits/BPMNotePanel/BPMNoteEditContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NoteEdits/BPMNotePanel/BPMNoteEditContainer/BPMValue"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 2.0
+offset_right = 83.0
+offset_bottom = 25.0
+text = "Change BPM to:"
+
+[node name="LineEdit" type="LineEdit" parent="NoteEdits/BPMNotePanel/BPMNoteEditContainer/BPMValue"]
+layout_mode = 0
+offset_left = 144.0
+offset_top = -1.0
+offset_right = 236.0
+offset_bottom = 30.0
+placeholder_text = "BPM Value"
+
+[node name="BKGNotePanel" type="PanelContainer" parent="NoteEdits"]
+visible = false
+offset_left = 738.0
+offset_top = 52.0
+offset_right = 1140.0
+offset_bottom = 135.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_sdh1e")
+script = ExtResource("19_k1sck")
+
+[node name="BKGNoteEditContainer" type="VBoxContainer" parent="NoteEdits/BKGNotePanel"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NoteEdits/BKGNotePanel/BKGNoteEditContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "BKG Note Properties"
+horizontal_alignment = 1
+
+[node name="Position" type="Control" parent="NoteEdits/BKGNotePanel/BKGNoteEditContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NoteEdits/BKGNotePanel/BKGNoteEditContainer/Position"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 2.0
+offset_right = 84.0
+offset_bottom = 25.0
+text = "Position:"
+
+[node name="LineEdit" type="LineEdit" parent="NoteEdits/BKGNotePanel/BKGNoteEditContainer/Position"]
+layout_mode = 0
+offset_left = 92.0
+offset_top = -1.0
+offset_right = 160.563
+offset_bottom = 30.0
+placeholder_text = "Bar"
+
+[node name="LineEdit2" type="LineEdit" parent="NoteEdits/BKGNotePanel/BKGNoteEditContainer/Position"]
+layout_mode = 0
+offset_left = 189.0
+offset_top = -1.0
+offset_right = 334.0
+offset_bottom = 30.0
+placeholder_text = "Fraction"
+
+[node name="Label2" type="Label" parent="NoteEdits/BKGNotePanel/BKGNoteEditContainer/Position"]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 3.0
+offset_right = 211.0
+offset_bottom = 26.0
+text = ":"
+
+[node name="DefaultPanel" type="PanelContainer" parent="NoteEdits"]
+offset_left = 738.0
+offset_top = 52.0
+offset_right = 1140.0
+offset_bottom = 129.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_sdh1e")
+
+[node name="BKGNoteEditContainer" type="VBoxContainer" parent="NoteEdits/DefaultPanel"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NoteEdits/DefaultPanel/BKGNoteEditContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "-Note Edit-"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="NoteEdits/DefaultPanel/BKGNoteEditContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.589096, 0.589096, 0.589096, 1)
+text = "Select a note..."
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="NoteEdits/DefaultPanel"]
+position = Vector2(24, 35)
+texture = ExtResource("16_0u1f5")
+
+[node name="Sprite2D2" type="Sprite2D" parent="NoteEdits/DefaultPanel"]
+position = Vector2(378, 35)
+texture = ExtResource("16_0u1f5")
+
+[node name="NoteEditManager" type="Node" parent="NoteEdits"]
+script = ExtResource("16_5tdu1")
+
+[node name="Managers" type="Node" parent="."]
+
+[node name="InputManager" type="Node" parent="Managers"]
+script = ExtResource("3_ba0ut")
+
+[node name="SyncTimeSystem" type="Node" parent="Managers"]
+script = ExtResource("8_o435n")
+
+[node name="TipManager" type="Node" parent="Managers"]
+script = ExtResource("18_8g6du")
+
+[node name="AudioSettings" type="Node" parent="."]
+script = ExtResource("19_aa8l6")
+
+[node name="BKG" type="ColorRect" parent="AudioSettings"]
+offset_left = 844.0
+offset_top = 429.0
+offset_right = 1143.0
+offset_bottom = 636.0
+color = Color(0, 0, 0, 0.419608)
+
+[node name="BGMRate" type="Node" parent="AudioSettings"]
+
+[node name="Label" type="Label" parent="AudioSettings/BGMRate"]
+offset_left = 871.0
+offset_top = 440.0
+offset_right = 1023.0
+offset_bottom = 463.0
+text = "BGM Speed Rate(%)"
+
+[node name="LineEdit" type="LineEdit" parent="AudioSettings/BGMRate"]
+offset_left = 1016.0
+offset_top = 461.0
+offset_right = 1084.56
+offset_bottom = 492.0
+text = "100"
+
+[node name="HScrollBar" type="HScrollBar" parent="AudioSettings/BGMRate"]
+offset_left = 870.0
+offset_top = 466.0
+offset_right = 1010.0
+offset_bottom = 486.0
+min_value = 25.0
+max_value = 200.0
+value = 100.0
+
+[node name="Button" type="Button" parent="AudioSettings/BGMRate"]
+offset_left = 1096.0
+offset_top = 464.0
+offset_right = 1121.0
+offset_bottom = 489.0
+focus_mode = 0
+icon = ExtResource("20_k1sck")
+expand_icon = true
+
+[node name="BGMVolume" type="Node" parent="AudioSettings"]
+
+[node name="Label" type="Label" parent="AudioSettings/BGMVolume"]
+offset_left = 872.0
+offset_top = 502.0
+offset_right = 973.0
+offset_bottom = 525.0
+text = "BGM Volume"
+
+[node name="LineEdit" type="LineEdit" parent="AudioSettings/BGMVolume"]
+offset_left = 1016.0
+offset_top = 523.0
+offset_right = 1084.56
+offset_bottom = 554.0
+text = "1"
+
+[node name="HScrollBar" type="HScrollBar" parent="AudioSettings/BGMVolume"]
+offset_left = 870.0
+offset_top = 528.0
+offset_right = 1010.0
+offset_bottom = 548.0
+max_value = 2.0
+value = 1.0
+
+[node name="Button" type="Button" parent="AudioSettings/BGMVolume"]
+offset_left = 1096.0
+offset_top = 526.0
+offset_right = 1121.0
+offset_bottom = 551.0
+focus_mode = 0
+icon = ExtResource("20_k1sck")
+expand_icon = true
+
+[node name="SEVolume" type="Node" parent="AudioSettings"]
+
+[node name="Label" type="Label" parent="AudioSettings/SEVolume"]
+offset_left = 872.0
+offset_top = 568.0
+offset_right = 1003.0
+offset_bottom = 591.0
+text = "SE Volume"
+
+[node name="LineEdit" type="LineEdit" parent="AudioSettings/SEVolume"]
+offset_left = 1016.0
+offset_top = 589.0
+offset_right = 1084.56
+offset_bottom = 620.0
+text = "1"
+
+[node name="HScrollBar" type="HScrollBar" parent="AudioSettings/SEVolume"]
+offset_left = 870.0
+offset_top = 594.0
+offset_right = 1010.0
+offset_bottom = 614.0
+max_value = 2.0
+value = 1.0
+
+[node name="Button" type="Button" parent="AudioSettings/SEVolume"]
+offset_left = 1096.0
+offset_top = 592.0
+offset_right = 1121.0
+offset_bottom = 617.0
+focus_mode = 0
+icon = ExtResource("20_k1sck")
+expand_icon = true
+
+[node name="TrackLabels" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="TrackLabels"]
+offset_left = 34.0
+offset_top = 600.0
+offset_right = 86.0
+offset_bottom = 623.0
+text = "Track1"
+
+[node name="Label2" type="Label" parent="TrackLabels"]
+offset_left = 105.0
+offset_top = 600.0
+offset_right = 157.0
+offset_bottom = 623.0
+text = "Track2"
+
+[node name="Label3" type="Label" parent="TrackLabels"]
+offset_left = 175.0
+offset_top = 600.0
+offset_right = 227.0
+offset_bottom = 623.0
+text = "Track3"
+
+[node name="Label4" type="Label" parent="TrackLabels"]
+offset_left = 253.0
+offset_top = 600.0
+offset_right = 305.0
+offset_bottom = 623.0
+text = "BKG"
+
+[node name="Label5" type="Label" parent="TrackLabels"]
+offset_left = 322.0
+offset_top = 600.0
+offset_right = 374.0
+offset_bottom = 623.0
+text = "BPM"

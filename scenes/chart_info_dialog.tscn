@@ -1,0 +1,180 @@
+[gd_scene load_steps=2 format=3 uid="uid://beh0m0ntdiuwl"]
+
+[ext_resource type="Script" uid="uid://cw5q4dwe6nv0c" path="res://scripts/ChartInfoDialog.cs" id="1_eecqx"]
+
+[node name="ChartInfoDialog" type="AcceptDialog"]
+title = "Modify Chart Info"
+position = Vector2i(0, 36)
+size = Vector2i(520, 420)
+script = ExtResource("1_eecqx")
+
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+
+[node name="Title" type="Node" parent="CanvasGroup"]
+
+[node name="Label" type="Label" parent="CanvasGroup/Title"]
+offset_left = 8.0
+offset_top = 5.0
+offset_right = 48.0
+offset_bottom = 28.0
+text = "Title"
+
+[node name="LineEdit" type="LineEdit" parent="CanvasGroup/Title"]
+offset_left = 11.0
+offset_top = 28.0
+offset_right = 221.0
+offset_bottom = 59.0
+placeholder_text = "Best Title Ever."
+
+[node name="Artist" type="Node" parent="CanvasGroup"]
+
+[node name="Label" type="Label" parent="CanvasGroup/Artist"]
+offset_left = 8.0
+offset_top = 63.0
+offset_right = 48.0
+offset_bottom = 86.0
+text = "Author(Artist)"
+
+[node name="LineEdit" type="LineEdit" parent="CanvasGroup/Artist"]
+offset_left = 11.0
+offset_top = 86.0
+offset_right = 221.0
+offset_bottom = 117.0
+placeholder_text = "Godlike Artist."
+
+[node name="Mapper" type="Node" parent="CanvasGroup"]
+
+[node name="Label" type="Label" parent="CanvasGroup/Mapper"]
+offset_left = 8.0
+offset_top = 122.0
+offset_right = 115.0
+offset_bottom = 145.0
+text = "Mapper"
+
+[node name="LineEdit" type="LineEdit" parent="CanvasGroup/Mapper"]
+offset_left = 11.0
+offset_top = 145.0
+offset_right = 221.0
+offset_bottom = 176.0
+placeholder_text = "Lengendary Charter."
+
+[node name="Level" type="Node" parent="CanvasGroup"]
+
+[node name="Label" type="Label" parent="CanvasGroup/Level"]
+offset_left = 8.0
+offset_top = 184.0
+offset_right = 115.0
+offset_bottom = 207.0
+text = "Level"
+
+[node name="LineEdit" type="LineEdit" parent="CanvasGroup/Level"]
+offset_left = 11.0
+offset_top = 207.0
+offset_right = 126.0
+offset_bottom = 238.0
+placeholder_text = "Finest Level."
+
+[node name="BPM" type="Node" parent="CanvasGroup"]
+
+[node name="Label" type="Label" parent="CanvasGroup/BPM"]
+offset_left = 240.0
+offset_top = 5.0
+offset_right = 280.0
+offset_bottom = 28.0
+text = "Base BPM"
+
+[node name="LineEdit" type="LineEdit" parent="CanvasGroup/BPM"]
+offset_left = 243.0
+offset_top = 28.0
+offset_right = 453.0
+offset_bottom = 59.0
+placeholder_text = "Input a float value."
+
+[node name="Offset" type="Node" parent="CanvasGroup"]
+
+[node name="Label" type="Label" parent="CanvasGroup/Offset"]
+offset_left = 240.0
+offset_top = 63.0
+offset_right = 317.0
+offset_bottom = 86.0
+text = "Chart Offset (s)"
+
+[node name="Label" type="Label" parent="CanvasGroup/Offset/Label"]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 8.0
+offset_right = 294.0
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(0.695503, 0.695503, 0.695503, 1)
+theme_override_font_sizes/font_size = 10
+text = "The delaying time of the chart."
+
+[node name="LineEdit" type="LineEdit" parent="CanvasGroup/Offset"]
+offset_left = 243.0
+offset_top = 86.0
+offset_right = 453.0
+offset_bottom = 117.0
+placeholder_text = "Input a float value."
+
+[node name="BGOffset" type="Node" parent="CanvasGroup"]
+
+[node name="Label" type="Label" parent="CanvasGroup/BGOffset"]
+offset_left = 240.0
+offset_top = 122.0
+offset_right = 347.0
+offset_bottom = 145.0
+text = "BGA Offset (s)"
+
+[node name="LineEdit" type="LineEdit" parent="CanvasGroup/BGOffset"]
+offset_left = 243.0
+offset_top = 145.0
+offset_right = 453.0
+offset_bottom = 176.0
+placeholder_text = "Input a float value."
+
+[node name="BGMPath" type="Node" parent="CanvasGroup"]
+
+[node name="Button" type="Button" parent="CanvasGroup/BGMPath"]
+offset_left = 13.0
+offset_top = 277.0
+offset_right = 79.0
+offset_bottom = 308.0
+text = "Browse"
+
+[node name="PathLabel" type="Label" parent="CanvasGroup/BGMPath"]
+offset_left = 84.0
+offset_top = 281.0
+offset_right = 157.0
+offset_bottom = 304.0
+text = "..."
+
+[node name="Label" type="Label" parent="CanvasGroup/BGMPath"]
+offset_left = 14.0
+offset_top = 254.0
+offset_right = 91.0
+offset_bottom = 277.0
+text = "BGM Path"
+
+[node name="BGAPath" type="Node" parent="CanvasGroup"]
+
+[node name="Button" type="Button" parent="CanvasGroup/BGAPath"]
+offset_left = 13.0
+offset_top = 337.0
+offset_right = 79.0
+offset_bottom = 368.0
+disabled = true
+text = "Browse"
+
+[node name="PathLabel" type="Label" parent="CanvasGroup/BGAPath"]
+offset_left = 84.0
+offset_top = 341.0
+offset_right = 292.0
+offset_bottom = 364.0
+text = "CURRENTLY UNAVAILABLE!"
+
+[node name="Label" type="Label" parent="CanvasGroup/BGAPath"]
+offset_left = 14.0
+offset_top = 314.0
+offset_right = 87.0
+offset_bottom = 337.0
+text = "BGA Path"
