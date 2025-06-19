@@ -1,0 +1,91 @@
+[gd_scene load_steps=2 format=3 uid="uid://dp271fe4rkrrc"]
+
+[ext_resource type="Script" uid="uid://diaei8yd5uv6e" path="res://scripts/SettingsDialog.cs" id="1_00hgc"]
+
+[node name="SettingsDialog" type="AcceptDialog"]
+title = "设置"
+position = Vector2i(0, 36)
+size = Vector2i(300, 250)
+script = ExtResource("1_00hgc")
+
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+
+[node name="HitSound" type="Node" parent="CanvasGroup"]
+
+[node name="Normal" type="Node" parent="CanvasGroup/HitSound"]
+
+[node name="Label" type="Label" parent="CanvasGroup/HitSound/Normal"]
+offset_left = 17.0
+offset_top = 16.0
+offset_right = 209.0
+offset_bottom = 39.0
+text = "普通Note打击音效"
+
+[node name="OptionButton" type="OptionButton" parent="CanvasGroup/HitSound/Normal"]
+offset_left = 20.0
+offset_top = 49.0
+offset_right = 114.0
+offset_bottom = 80.0
+selected = 1
+item_count = 4
+popup/item_0/text = "Explode"
+popup/item_0/id = 0
+popup/item_1/text = "Kick"
+popup/item_1/id = 1
+popup/item_2/text = "Rim"
+popup/item_2/id = 2
+popup/item_3/text = "..."
+popup/item_3/id = 3
+
+[node name="Button" type="Button" parent="CanvasGroup/HitSound/Normal"]
+offset_left = 134.0
+offset_top = 49.0
+offset_right = 209.0
+offset_bottom = 80.0
+text = "从文件加载"
+
+[node name="Gold" type="Node" parent="CanvasGroup/HitSound"]
+
+[node name="Label" type="Label" parent="CanvasGroup/HitSound/Gold"]
+offset_left = 17.0
+offset_top = 97.0
+offset_right = 187.0
+offset_bottom = 120.0
+text = "绝赞Note打击音效"
+
+[node name="OptionButton" type="OptionButton" parent="CanvasGroup/HitSound/Gold"]
+offset_left = 17.0
+offset_top = 130.0
+offset_right = 111.0
+offset_bottom = 161.0
+selected = 2
+item_count = 4
+popup/item_0/text = "Coin"
+popup/item_0/id = 0
+popup/item_1/text = "Kick"
+popup/item_1/id = 1
+popup/item_2/text = "Snare"
+popup/item_2/id = 2
+popup/item_3/text = "..."
+popup/item_3/id = 3
+
+[node name="SameCheckButton" type="CheckButton" parent="CanvasGroup/HitSound/Gold"]
+offset_left = 7.0
+offset_top = 170.0
+offset_right = 51.0
+offset_bottom = 194.0
+scale = Vector2(1.425, 1.425)
+
+[node name="Label2" type="Label" parent="CanvasGroup/HitSound/Gold"]
+offset_left = 70.0
+offset_top = 175.0
+offset_right = 267.0
+offset_bottom = 198.0
+text = "绝赞与普通音效相同"
+
+[node name="Button" type="Button" parent="CanvasGroup/HitSound/Gold"]
+offset_left = 134.0
+offset_top = 130.0
+offset_right = 209.0
+offset_bottom = 161.0
+text = "从文件加载"

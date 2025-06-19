@@ -1,0 +1,566 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\GodotProjects\\RCE\\rock-chart-editor\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|e:\\godotprojects\\rce\\rock-chart-editor\\scripts\\managers\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|solutionrelative:scripts\\managers\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|e:\\godotprojects\\rce\\rock-chart-editor\\scripts\\managers\\commandsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|solutionrelative:scripts\\managers\\commandsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|e:\\godotprojects\\rce\\rock-chart-editor\\scripts\\utils\\noteinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|solutionrelative:scripts\\utils\\noteinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|e:\\godotprojects\\rce\\rock-chart-editor\\scripts\\managers\\fileprocesser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|solutionrelative:scripts\\managers\\fileprocesser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|e:\\godotprojects\\rce\\rock-chart-editor\\scripts\\menubar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|solutionrelative:scripts\\menubar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|e:\\godotprojects\\rce\\rock-chart-editor\\scripts\\autoload\\editor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|solutionrelative:scripts\\autoload\\editor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|e:\\godotprojects\\rce\\rock-chart-editor\\scripts\\note_edit\\cameranoteedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|solutionrelative:scripts\\note_edit\\cameranoteedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|e:\\godotprojects\\rce\\rock-chart-editor\\scripts\\note_edit\\hitnoteedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|solutionrelative:scripts\\note_edit\\hitnoteedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|e:\\godotprojects\\rce\\rock-chart-editor\\scripts\\sp\\serika.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|solutionrelative:scripts\\sp\\serika.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|e:\\godotprojects\\rce\\rock-chart-editor\\scripts\\notedrawer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|solutionrelative:scripts\\notedrawer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|e:\\godotprojects\\rce\\rock-chart-editor\\scripts\\griddrawer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|solutionrelative:scripts\\griddrawer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|e:\\godotprojects\\rce\\rock-chart-editor\\scripts\\settingsdialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|solutionrelative:scripts\\settingsdialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|e:\\godotprojects\\rce\\rock-chart-editor\\scripts\\inputbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|solutionrelative:scripts\\inputbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|e:\\godotprojects\\rce\\rock-chart-editor\\scripts\\note_edit\\bpmnoteedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|solutionrelative:scripts\\note_edit\\bpmnoteedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|e:\\godotprojects\\rce\\rock-chart-editor\\scripts\\managers\\synctimesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|solutionrelative:scripts\\managers\\synctimesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|e:\\godotprojects\\rce\\rock-chart-editor\\scripts\\chartinfodialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|solutionrelative:scripts\\chartinfodialog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|e:\\godotprojects\\rce\\rock-chart-editor\\scripts\\drawergroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|solutionrelative:scripts\\drawergroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|e:\\godotprojects\\rce\\rock-chart-editor\\scripts\\denominatormodifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|solutionrelative:scripts\\denominatormodifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|e:\\godotprojects\\rce\\rock-chart-editor\\scripts\\cursordrawer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|solutionrelative:scripts\\cursordrawer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|e:\\godotprojects\\rce\\rock-chart-editor\\scripts\\effectnoteselection\\effectnotebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|solutionrelative:scripts\\effectnoteselection\\effectnotebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|e:\\godotprojects\\rce\\rock-chart-editor\\scripts\\note_edit\\bkgnoteedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|solutionrelative:scripts\\note_edit\\bkgnoteedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|e:\\godotprojects\\rce\\rock-chart-editor\\scripts\\managers\\notetriggeringmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|solutionrelative:scripts\\managers\\notetriggeringmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|e:\\godotprojects\\rce\\rock-chart-editor\\scripts\\managers\\noteeditmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|solutionrelative:scripts\\managers\\noteeditmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|e:\\godotprojects\\rce\\rock-chart-editor\\scripts\\managers\\tipmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|solutionrelative:scripts\\managers\\tipmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|e:\\godotprojects\\rce\\rock-chart-editor\\scripts\\managers\\mediamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|solutionrelative:scripts\\managers\\mediamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|e:\\godotprojects\\rce\\rock-chart-editor\\.editorconfig||{68B46364-D378-42F2-9E72-37D86C5F4468}",
+      "RelativeMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|solutionrelative:.editorconfig||{68B46364-D378-42F2-9E72-37D86C5F4468}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|e:\\godotprojects\\rce\\rock-chart-editor\\scripts\\audiosettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|solutionrelative:scripts\\audiosettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|e:\\godotprojects\\rce\\rock-chart-editor\\scripts\\barteleportation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|solutionrelative:scripts\\barteleportation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|e:\\godotprojects\\rce\\rock-chart-editor\\scripts\\utils\\utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|solutionrelative:scripts\\utils\\utils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|e:\\godotprojects\\rce\\rock-chart-editor\\scripts\\note_edit\\curvedrawer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|solutionrelative:scripts\\note_edit\\curvedrawer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|e:\\godotprojects\\rce\\rock-chart-editor\\scripts\\effectnoteselection\\effectnoteselectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|solutionrelative:scripts\\effectnoteselection\\effectnoteselectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|e:\\godotprojects\\rce\\rock-chart-editor\\rock chart editor.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{5720492B-EA56-43E3-89F5-08A3F1E15FC5}|Rock Chart Editor.csproj|solutionrelative:rock chart editor.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Editor.cs",
+              "DocumentMoniker": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\autoload\\Editor.cs",
+              "RelativeDocumentMoniker": "scripts\\autoload\\Editor.cs",
+              "ToolTip": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\autoload\\Editor.cs",
+              "RelativeToolTip": "scripts\\autoload\\Editor.cs",
+              "ViewState": "AQIAAHIBAAAAAAAAAAAkwKgBAABmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T09:31:21.887Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "InputManager.cs",
+              "DocumentMoniker": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\managers\\InputManager.cs",
+              "RelativeDocumentMoniker": "scripts\\managers\\InputManager.cs",
+              "ToolTip": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\managers\\InputManager.cs",
+              "RelativeToolTip": "scripts\\managers\\InputManager.cs",
+              "ViewState": "AQIAAFcAAAAAAAAAAAAYwLkAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T10:00:12.653Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CommandSystem.cs",
+              "DocumentMoniker": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\managers\\CommandSystem.cs",
+              "RelativeDocumentMoniker": "scripts\\managers\\CommandSystem.cs",
+              "ToolTip": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\managers\\CommandSystem.cs",
+              "RelativeToolTip": "scripts\\managers\\CommandSystem.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAANwCAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T02:28:34.662Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "MediaManager.cs",
+              "DocumentMoniker": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\managers\\MediaManager.cs",
+              "RelativeDocumentMoniker": "scripts\\managers\\MediaManager.cs",
+              "ToolTip": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\managers\\MediaManager.cs",
+              "RelativeToolTip": "scripts\\managers\\MediaManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T08:09:06.786Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NoteInfo.cs",
+              "DocumentMoniker": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\utils\\NoteInfo.cs",
+              "RelativeDocumentMoniker": "scripts\\utils\\NoteInfo.cs",
+              "ToolTip": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\utils\\NoteInfo.cs",
+              "RelativeToolTip": "scripts\\utils\\NoteInfo.cs",
+              "ViewState": "AQIAAI4AAAAAAAAAAAAiwKcAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T05:42:20.933Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FileProcesser.cs",
+              "DocumentMoniker": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\managers\\FileProcesser.cs",
+              "RelativeDocumentMoniker": "scripts\\managers\\FileProcesser.cs",
+              "ToolTip": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\managers\\FileProcesser.cs",
+              "RelativeToolTip": "scripts\\managers\\FileProcesser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAOcAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T07:00:04.696Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "TipManager.cs",
+              "DocumentMoniker": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\managers\\TipManager.cs",
+              "RelativeDocumentMoniker": "scripts\\managers\\TipManager.cs",
+              "ToolTip": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\managers\\TipManager.cs",
+              "RelativeToolTip": "scripts\\managers\\TipManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T03:03:54.139Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1012066943:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:204098734:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2102081149:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": ".editorconfig",
+              "DocumentMoniker": "E:\\GodotProjects\\RCE\\rock-chart-editor\\.editorconfig",
+              "RelativeDocumentMoniker": ".editorconfig",
+              "ToolTip": "E:\\GodotProjects\\RCE\\rock-chart-editor\\.editorconfig",
+              "RelativeToolTip": ".editorconfig",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-06-18T08:10:41.343Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "CurveDrawer.cs",
+              "DocumentMoniker": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\note_edit\\CurveDrawer.cs",
+              "RelativeDocumentMoniker": "scripts\\note_edit\\CurveDrawer.cs",
+              "ToolTip": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\note_edit\\CurveDrawer.cs",
+              "RelativeToolTip": "scripts\\note_edit\\CurveDrawer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T07:40:52.521Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "EffectNoteSelectionManager.cs",
+              "DocumentMoniker": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\EffectNoteSelection\\EffectNoteSelectionManager.cs",
+              "RelativeDocumentMoniker": "scripts\\EffectNoteSelection\\EffectNoteSelectionManager.cs",
+              "ToolTip": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\EffectNoteSelection\\EffectNoteSelectionManager.cs",
+              "RelativeToolTip": "scripts\\EffectNoteSelection\\EffectNoteSelectionManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T07:04:36.486Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "EffectNoteButton.cs",
+              "DocumentMoniker": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\EffectNoteSelection\\EffectNoteButton.cs",
+              "RelativeDocumentMoniker": "scripts\\EffectNoteSelection\\EffectNoteButton.cs",
+              "ToolTip": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\EffectNoteSelection\\EffectNoteButton.cs",
+              "RelativeToolTip": "scripts\\EffectNoteSelection\\EffectNoteButton.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T07:02:59.786Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CameraNoteEdit.cs",
+              "DocumentMoniker": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\note_edit\\CameraNoteEdit.cs",
+              "RelativeDocumentMoniker": "scripts\\note_edit\\CameraNoteEdit.cs",
+              "ToolTip": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\note_edit\\CameraNoteEdit.cs",
+              "RelativeToolTip": "scripts\\note_edit\\CameraNoteEdit.cs",
+              "ViewState": "AQIAAJIAAAAAAAAAAAAYwJwAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T18:10:13.905Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "NoteDrawer.cs",
+              "DocumentMoniker": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\NoteDrawer.cs",
+              "RelativeDocumentMoniker": "scripts\\NoteDrawer.cs",
+              "ToolTip": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\NoteDrawer.cs",
+              "RelativeToolTip": "scripts\\NoteDrawer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T17:52:14.043Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Menubar.cs",
+              "DocumentMoniker": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\Menubar.cs",
+              "RelativeDocumentMoniker": "scripts\\Menubar.cs",
+              "ToolTip": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\Menubar.cs",
+              "RelativeToolTip": "scripts\\Menubar.cs",
+              "ViewState": "AQIAAI0AAAAAAAAAAADwv5UAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T07:51:33.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SyncTimeSystem.cs",
+              "DocumentMoniker": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\managers\\SyncTimeSystem.cs",
+              "RelativeDocumentMoniker": "scripts\\managers\\SyncTimeSystem.cs",
+              "ToolTip": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\managers\\SyncTimeSystem.cs",
+              "RelativeToolTip": "scripts\\managers\\SyncTimeSystem.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAuwCkAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T07:56:51.923Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GridDrawer.cs",
+              "DocumentMoniker": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\GridDrawer.cs",
+              "RelativeDocumentMoniker": "scripts\\GridDrawer.cs",
+              "ToolTip": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\GridDrawer.cs",
+              "RelativeToolTip": "scripts\\GridDrawer.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAgwEEAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T07:20:37.211Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Utils.cs",
+              "DocumentMoniker": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\utils\\Utils.cs",
+              "RelativeDocumentMoniker": "scripts\\utils\\Utils.cs",
+              "ToolTip": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\utils\\Utils.cs",
+              "RelativeToolTip": "scripts\\utils\\Utils.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T05:30:47.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ChartInfoDialog.cs",
+              "DocumentMoniker": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\ChartInfoDialog.cs",
+              "RelativeDocumentMoniker": "scripts\\ChartInfoDialog.cs",
+              "ToolTip": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\ChartInfoDialog.cs",
+              "RelativeToolTip": "scripts\\ChartInfoDialog.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAYwAAAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T09:00:26.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CursorDrawer.cs",
+              "DocumentMoniker": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\CursorDrawer.cs",
+              "RelativeDocumentMoniker": "scripts\\CursorDrawer.cs",
+              "ToolTip": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\CursorDrawer.cs",
+              "RelativeToolTip": "scripts\\CursorDrawer.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAzwCMAAABcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T06:47:10.102Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HitNoteEdit.cs",
+              "DocumentMoniker": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\note_edit\\HitNoteEdit.cs",
+              "RelativeDocumentMoniker": "scripts\\note_edit\\HitNoteEdit.cs",
+              "ToolTip": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\note_edit\\HitNoteEdit.cs",
+              "RelativeToolTip": "scripts\\note_edit\\HitNoteEdit.cs",
+              "ViewState": "AQIAAMgAAAAAAAAAAAAwwNYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T15:41:28.042Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "InputBox.cs",
+              "DocumentMoniker": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\InputBox.cs",
+              "RelativeDocumentMoniker": "scripts\\InputBox.cs",
+              "ToolTip": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\InputBox.cs",
+              "RelativeToolTip": "scripts\\InputBox.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T07:32:48.054Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "DenominatorModifier.cs",
+              "DocumentMoniker": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\DenominatorModifier.cs",
+              "RelativeDocumentMoniker": "scripts\\DenominatorModifier.cs",
+              "ToolTip": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\DenominatorModifier.cs",
+              "RelativeToolTip": "scripts\\DenominatorModifier.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T11:09:09.18Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "NoteEditManager.cs",
+              "DocumentMoniker": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\managers\\NoteEditManager.cs",
+              "RelativeDocumentMoniker": "scripts\\managers\\NoteEditManager.cs",
+              "ToolTip": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\managers\\NoteEditManager.cs",
+              "RelativeToolTip": "scripts\\managers\\NoteEditManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T16:56:12.224Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SettingsDialog.cs",
+              "DocumentMoniker": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\SettingsDialog.cs",
+              "RelativeDocumentMoniker": "scripts\\SettingsDialog.cs",
+              "ToolTip": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\SettingsDialog.cs",
+              "RelativeToolTip": "scripts\\SettingsDialog.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T05:42:19.546Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DrawerGroup.cs",
+              "DocumentMoniker": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\DrawerGroup.cs",
+              "RelativeDocumentMoniker": "scripts\\DrawerGroup.cs",
+              "ToolTip": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\DrawerGroup.cs",
+              "RelativeToolTip": "scripts\\DrawerGroup.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAQwC0AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T08:01:50.761Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "BarTeleportation.cs",
+              "DocumentMoniker": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\BarTeleportation.cs",
+              "RelativeDocumentMoniker": "scripts\\BarTeleportation.cs",
+              "ToolTip": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\BarTeleportation.cs",
+              "RelativeToolTip": "scripts\\BarTeleportation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T11:21:51.415Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "AudioSettings.cs",
+              "DocumentMoniker": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\AudioSettings.cs",
+              "RelativeDocumentMoniker": "scripts\\AudioSettings.cs",
+              "ToolTip": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\AudioSettings.cs",
+              "RelativeToolTip": "scripts\\AudioSettings.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAQwAIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T06:26:13.293Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Serika.cs",
+              "DocumentMoniker": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\SP\\Serika.cs",
+              "RelativeDocumentMoniker": "scripts\\SP\\Serika.cs",
+              "ToolTip": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\SP\\Serika.cs",
+              "RelativeToolTip": "scripts\\SP\\Serika.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T17:35:08.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "BPMNoteEdit.cs",
+              "DocumentMoniker": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\note_edit\\BPMNoteEdit.cs",
+              "RelativeDocumentMoniker": "scripts\\note_edit\\BPMNoteEdit.cs",
+              "ToolTip": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\note_edit\\BPMNoteEdit.cs",
+              "RelativeToolTip": "scripts\\note_edit\\BPMNoteEdit.cs",
+              "ViewState": "AQIAAFsAAAAAAAAAAAAkwHQAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T08:35:02.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "BKGNoteEdit.cs",
+              "DocumentMoniker": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\note_edit\\BKGNoteEdit.cs",
+              "RelativeDocumentMoniker": "scripts\\note_edit\\BKGNoteEdit.cs",
+              "ToolTip": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\note_edit\\BKGNoteEdit.cs",
+              "RelativeToolTip": "scripts\\note_edit\\BKGNoteEdit.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAAgwFQAAACBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T08:24:42.355Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "NoteTriggeringManager.cs",
+              "DocumentMoniker": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\managers\\NoteTriggeringManager.cs",
+              "RelativeDocumentMoniker": "scripts\\managers\\NoteTriggeringManager.cs",
+              "ToolTip": "E:\\GodotProjects\\RCE\\rock-chart-editor\\scripts\\managers\\NoteTriggeringManager.cs",
+              "RelativeToolTip": "scripts\\managers\\NoteTriggeringManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAB2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T07:56:43.023Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Rock Chart Editor.csproj",
+              "DocumentMoniker": "E:\\GODOTPROJECTS\\RCE\\ROCK-CHART-EDITOR\\Rock Chart Editor.csproj",
+              "RelativeDocumentMoniker": "Rock Chart Editor.csproj",
+              "ToolTip": "E:\\GODOTPROJECTS\\RCE\\ROCK-CHART-EDITOR\\Rock Chart Editor.csproj",
+              "RelativeToolTip": "Rock Chart Editor.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-29T03:41:32.779Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

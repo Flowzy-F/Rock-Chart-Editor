@@ -1,0 +1,201 @@
+[gd_scene load_steps=2 format=3 uid="uid://beh0m0ntdiuwl"]
+
+[ext_resource type="Script" uid="uid://cw5q4dwe6nv0c" path="res://scripts/ChartInfoDialog.cs" id="1_eecqx"]
+
+[node name="ChartInfoDialog" type="AcceptDialog"]
+title = "修改谱面信息"
+position = Vector2i(0, 36)
+size = Vector2i(520, 420)
+script = ExtResource("1_eecqx")
+
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+
+[node name="Title" type="Node" parent="CanvasGroup"]
+
+[node name="Label" type="Label" parent="CanvasGroup/Title"]
+offset_left = 8.0
+offset_top = 5.0
+offset_right = 48.0
+offset_bottom = 28.0
+text = "曲名"
+
+[node name="LineEdit" type="LineEdit" parent="CanvasGroup/Title"]
+offset_left = 11.0
+offset_top = 28.0
+offset_right = 221.0
+offset_bottom = 59.0
+placeholder_text = "最美妙的标题。"
+
+[node name="Artist" type="Node" parent="CanvasGroup"]
+
+[node name="Label" type="Label" parent="CanvasGroup/Artist"]
+offset_left = 8.0
+offset_top = 63.0
+offset_right = 48.0
+offset_bottom = 86.0
+text = "曲作者"
+
+[node name="LineEdit" type="LineEdit" parent="CanvasGroup/Artist"]
+offset_left = 11.0
+offset_top = 86.0
+offset_right = 221.0
+offset_bottom = 117.0
+placeholder_text = "神级曲师。"
+
+[node name="Mapper" type="Node" parent="CanvasGroup"]
+
+[node name="Label" type="Label" parent="CanvasGroup/Mapper"]
+offset_left = 8.0
+offset_top = 122.0
+offset_right = 115.0
+offset_bottom = 145.0
+text = "谱师"
+
+[node name="LineEdit" type="LineEdit" parent="CanvasGroup/Mapper"]
+offset_left = 11.0
+offset_top = 145.0
+offset_right = 221.0
+offset_bottom = 176.0
+placeholder_text = "传奇谱面制作人。"
+
+[node name="Mass" type="Node" parent="CanvasGroup"]
+
+[node name="Label" type="Label" parent="CanvasGroup/Mass"]
+offset_left = 8.0
+offset_top = 184.0
+offset_right = 115.0
+offset_bottom = 207.0
+text = "定数"
+
+[node name="LineEdit" type="LineEdit" parent="CanvasGroup/Mass"]
+offset_left = 11.0
+offset_top = 207.0
+offset_right = 221.0
+offset_bottom = 238.0
+placeholder_text = "再合适不过的定数。"
+
+[node name="Difficulty" type="Node" parent="CanvasGroup"]
+
+[node name="Label" type="Label" parent="CanvasGroup/Difficulty"]
+offset_left = 239.0
+offset_top = 184.0
+offset_right = 346.0
+offset_bottom = 207.0
+text = "难度"
+
+[node name="OptionButton" type="OptionButton" parent="CanvasGroup/Difficulty"]
+offset_left = 242.0
+offset_top = 207.0
+offset_right = 452.0
+offset_bottom = 238.0
+selected = 0
+item_count = 7
+popup/item_0/text = "None"
+popup/item_0/id = 0
+popup/item_1/text = "Fun"
+popup/item_1/id = 1
+popup/item_2/text = "Easy"
+popup/item_2/id = 2
+popup/item_3/text = "Normal"
+popup/item_3/id = 3
+popup/item_4/text = "Hard"
+popup/item_4/id = 4
+popup/item_5/text = "Powerful"
+popup/item_5/id = 5
+popup/item_6/text = "So Powerful"
+popup/item_6/id = 6
+
+[node name="BPM" type="Node" parent="CanvasGroup"]
+
+[node name="Label" type="Label" parent="CanvasGroup/BPM"]
+offset_left = 240.0
+offset_top = 5.0
+offset_right = 280.0
+offset_bottom = 28.0
+text = "基础BPM"
+
+[node name="LineEdit" type="LineEdit" parent="CanvasGroup/BPM"]
+offset_left = 243.0
+offset_top = 28.0
+offset_right = 453.0
+offset_bottom = 59.0
+placeholder_text = "请输入一个浮点数值。"
+
+[node name="Offset" type="Node" parent="CanvasGroup"]
+
+[node name="Label" type="Label" parent="CanvasGroup/Offset"]
+offset_left = 240.0
+offset_top = 63.0
+offset_right = 317.0
+offset_bottom = 86.0
+text = "谱面延迟 (秒)"
+
+[node name="LineEdit" type="LineEdit" parent="CanvasGroup/Offset"]
+offset_left = 243.0
+offset_top = 86.0
+offset_right = 453.0
+offset_bottom = 117.0
+placeholder_text = "请输入一个浮点数值。"
+
+[node name="BGOffset" type="Node" parent="CanvasGroup"]
+
+[node name="Label" type="Label" parent="CanvasGroup/BGOffset"]
+offset_left = 240.0
+offset_top = 122.0
+offset_right = 347.0
+offset_bottom = 145.0
+text = "BGA延迟 (秒)"
+
+[node name="LineEdit" type="LineEdit" parent="CanvasGroup/BGOffset"]
+offset_left = 243.0
+offset_top = 145.0
+offset_right = 453.0
+offset_bottom = 176.0
+placeholder_text = "请输入一个浮点数值。"
+
+[node name="BGMPath" type="Node" parent="CanvasGroup"]
+
+[node name="Button" type="Button" parent="CanvasGroup/BGMPath"]
+offset_left = 13.0
+offset_top = 277.0
+offset_right = 79.0
+offset_bottom = 308.0
+text = "浏览"
+
+[node name="PathLabel" type="Label" parent="CanvasGroup/BGMPath"]
+offset_left = 84.0
+offset_top = 281.0
+offset_right = 157.0
+offset_bottom = 304.0
+text = "..."
+
+[node name="Label" type="Label" parent="CanvasGroup/BGMPath"]
+offset_left = 14.0
+offset_top = 254.0
+offset_right = 91.0
+offset_bottom = 277.0
+text = "BGM路径"
+
+[node name="BGAPath" type="Node" parent="CanvasGroup"]
+
+[node name="Button" type="Button" parent="CanvasGroup/BGAPath"]
+offset_left = 13.0
+offset_top = 337.0
+offset_right = 79.0
+offset_bottom = 368.0
+disabled = true
+text = "浏览"
+
+[node name="PathLabel" type="Label" parent="CanvasGroup/BGAPath"]
+offset_left = 84.0
+offset_top = 341.0
+offset_right = 292.0
+offset_bottom = 364.0
+text = "当前暂不可用!"
+
+[node name="Label" type="Label" parent="CanvasGroup/BGAPath"]
+offset_left = 14.0
+offset_top = 314.0
+offset_right = 87.0
+offset_bottom = 337.0
+text = "BGA路径"

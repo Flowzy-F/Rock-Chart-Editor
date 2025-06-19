@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://belbuoxludcgj"]
+
+[ext_resource type="Script" uid="uid://c1jai43mmr6y6" path="res://scripts/InputBox.cs" id="1_8ikvi"]
+
+[node name="AcceptDialog" type="AcceptDialog"]
+auto_translate_mode = 1
+title = "Input"
+position = Vector2i(0, 36)
+size = Vector2i(250, 115)
+script = ExtResource("1_8ikvi")
+
+[node name="CanvasGroup" type="VBoxContainer" parent="."]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 242.0
+offset_bottom = 66.0
+
+[node name="Label" type="Label" parent="CanvasGroup"]
+layout_mode = 2
+text = "Please Input"
+horizontal_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="CanvasGroup"]
+layout_mode = 2

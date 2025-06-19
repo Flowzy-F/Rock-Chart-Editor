@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkp84b5j2hvtb"]
+
+[ext_resource type="Texture2D" uid="uid://balo2lxyr2hc3" path="res://img/Icons/FamiconsWarning.png" id="2_11blh"]
+[ext_resource type="Texture2D" uid="uid://chtbgvdvaml4o" path="res://img/Icons/Infomation.png" id="2_w8a05"]
+
+[node name="Tip" type="Control"]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -288.0
+offset_top = -128.0
+offset_right = 266.0
+offset_bottom = -83.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 554.0
+offset_bottom = 45.0
+color = Color(0, 0.540633, 4.81307e-07, 0.356863)
+
+[node name="ProgressBar" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 554.0
+offset_bottom = 45.0
+pivot_offset = Vector2(0, 22.5)
+color = Color(0, 1, 0, 0.196078)
+
+[node name="Text" type="Label" parent="."]
+layout_mode = 0
+offset_left = 56.0
+offset_right = 553.0
+offset_bottom = 45.0
+theme_override_font_sizes/font_size = 15
+text = "This is a tip"
+vertical_alignment = 1
+
+[node name="InformationIcon" type="Sprite2D" parent="."]
+position = Vector2(26, 22)
+scale = Vector2(0.285156, 0.285156)
+texture = ExtResource("2_w8a05")
+
+[node name="WarningIcon" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(26, 22)
+scale = Vector2(0.285156, 0.285156)
+texture = ExtResource("2_11blh")
