@@ -1,0 +1,973 @@
+[gd_scene load_steps=31 format=3 uid="uid://cagyyl3prh2y4"]
+
+[ext_resource type="Script" uid="uid://df3qp40l8087b" path="res://scripts/GridDrawer.cs" id="1_b1cmn"]
+[ext_resource type="Script" uid="uid://cp0qkir2730kc" path="res://scripts/DrawerGroup.cs" id="1_pxqd5"]
+[ext_resource type="Script" uid="uid://bgv2xc7rmtpod" path="res://scripts/managers/InputManager.cs" id="3_ba0ut"]
+[ext_resource type="Script" uid="uid://kehov44mfkvi" path="res://scripts/CursorDrawer.cs" id="3_q68jb"]
+[ext_resource type="Script" uid="uid://bofvylg74yq1j" path="res://scripts/NoteDrawer.cs" id="3_xg7d5"]
+[ext_resource type="AudioStream" uid="uid://cqchcl5siemkj" path="res://sounds/hit_sound/normal/hit_kick.wav" id="6_aa8l6"]
+[ext_resource type="AudioStream" uid="uid://cjsmx5x3oagh8" path="res://sounds/hit_sound/normal/hit_snare.wav" id="7_k1sck"]
+[ext_resource type="Script" uid="uid://igfsaqc6y5yu" path="res://scripts/managers/SyncTimeSystem.cs" id="8_o435n"]
+[ext_resource type="Script" uid="uid://dunnrl2l720qh" path="res://scripts/Menubar.cs" id="12_78fwb"]
+[ext_resource type="Texture2D" uid="uid://btbp5hd2uo44i" path="res://img/Icons/PerformanceShidunzi.png" id="13_6lm8n"]
+[ext_resource type="Script" uid="uid://ruk6mx11gv5c" path="res://scripts/DenominatorModifier.cs" id="13_74j0u"]
+[ext_resource type="Script" uid="uid://jkkukbuwr37s" path="res://scripts/note_edit/CameraNoteEdit.cs" id="13_k1sck"]
+[ext_resource type="Script" uid="uid://5mgjv4vlu6vm" path="res://scripts/note_edit/CurveDrawer.cs" id="14_1abrv"]
+[ext_resource type="Script" uid="uid://6cfl71m430ff" path="res://scripts/BarTeleportation.cs" id="14_sdh1e"]
+[ext_resource type="Script" uid="uid://cac174hg6267d" path="res://scripts/note_edit/HitNoteEdit.cs" id="15_2w0at"]
+[ext_resource type="Texture2D" uid="uid://cmn64slkpge82" path="res://img/Icons/NormalShidunzi.png" id="16_0u1f5"]
+[ext_resource type="Script" uid="uid://6y2oillnsc01" path="res://scripts/managers/NoteEditManager.cs" id="16_5tdu1"]
+[ext_resource type="Texture2D" uid="uid://dw4fgknl0q67n" path="res://img/Icons/GoldShidunzi.png" id="17_8g6du"]
+[ext_resource type="Script" uid="uid://cmf37a3dnrxu3" path="res://scripts/managers/TipManager.cs" id="18_8g6du"]
+[ext_resource type="Script" uid="uid://tm6anpag45e6" path="res://scripts/note_edit/BPMNoteEdit.cs" id="18_aa8l6"]
+[ext_resource type="Script" uid="uid://dhv0gr836me48" path="res://scripts/AudioSettings.cs" id="19_aa8l6"]
+[ext_resource type="Script" uid="uid://dh38mr56mxj5p" path="res://scripts/note_edit/BKGNoteEdit.cs" id="19_k1sck"]
+[ext_resource type="Texture2D" uid="uid://be42t3w0ensqv" path="res://img/Icons/Reset.png" id="20_k1sck"]
+[ext_resource type="Script" uid="uid://csny1kwl7uc0j" path="res://scripts/EffectNoteSelection/EffectNoteSelectionManager.cs" id="22_bn54a"]
+[ext_resource type="Texture2D" uid="uid://boehc51c4qoc0" path="res://img/Icons/NoteIcons/BPMNoteIcon.png" id="22_fce0a"]
+[ext_resource type="Script" uid="uid://bktaardbrv62q" path="res://scripts/EffectNoteSelection/EffectNoteButton.cs" id="23_7msgv"]
+[ext_resource type="Texture2D" uid="uid://e180wsktm6i1" path="res://img/Icons/NoteIcons/BKGNoteIcon.png" id="23_m12ww"]
+[ext_resource type="Texture2D" uid="uid://n5dibl8wbs7m" path="res://img/Icons/NoteIcons/CameraNoteIcon.png" id="24_7msgv"]
+[ext_resource type="Texture2D" uid="uid://hcpsekqhbrwn" path="res://img/Icons/NoteIcons/SelectedMark.png" id="24_bn54a"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sdh1e"]
+bg_color = Color(0, 0, 0, 0.447059)
+
+[node name="MainScene" type="Node2D"]
+
+[node name="DrawerGroup" type="CanvasGroup" parent="."]
+fit_margin = 1024.0
+script = ExtResource("1_pxqd5")
+
+[node name="GridDrawer" type="Control" parent="DrawerGroup"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 350.0
+offset_top = 75.0
+offset_right = 700.0
+offset_bottom = 595.0
+script = ExtResource("1_b1cmn")
+
+[node name="NoteDrawer" type="Control" parent="DrawerGroup"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_xg7d5")
+
+[node name="CursorDrawer" type="Control" parent="DrawerGroup"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_q68jb")
+
+[node name="DEBUG_LABEL" type="Label" parent="."]
+offset_top = 618.0
+offset_right = 203.0
+offset_bottom = 641.0
+text = "欢迎使用Rock Chart Editor!"
+
+[node name="MediaPlayers" type="Node" parent="."]
+
+[node name="BGMPlayer" type="AudioStreamPlayer" parent="MediaPlayers"]
+
+[node name="SEPlayerNormal" type="AudioStreamPlayer" parent="MediaPlayers"]
+stream = ExtResource("6_aa8l6")
+
+[node name="SEPlayerGold" type="AudioStreamPlayer" parent="MediaPlayers"]
+stream = ExtResource("7_k1sck")
+volume_db = -1.0
+
+[node name="BGAPlayer" type="VideoStreamPlayer" parent="MediaPlayers"]
+offset_left = 197.0
+offset_top = 20.0
+offset_right = 237.0
+offset_bottom = 60.0
+
+[node name="MenuBar" type="MenuBar" parent="."]
+offset_left = 973.0
+offset_top = 4.0
+offset_right = 1164.0
+offset_bottom = 35.0
+script = ExtResource("12_78fwb")
+
+[node name="文件" type="PopupMenu" parent="MenuBar"]
+size = Vector2i(134, 100)
+item_count = 2
+item_0/text = "从文件加载"
+item_0/id = 0
+item_1/text = "另存为"
+item_1/id = 1
+
+[node name="编辑" type="PopupMenu" parent="MenuBar"]
+auto_translate_mode = 1
+size = Vector2i(156, 100)
+item_count = 1
+item_0/text = "设置"
+item_0/id = 0
+
+[node name="谱面" type="PopupMenu" parent="MenuBar"]
+size = Vector2i(156, 100)
+item_count = 1
+item_0/text = "修改谱面信息"
+item_0/id = 0
+
+[node name="关于" type="PopupMenu" parent="MenuBar"]
+auto_translate_mode = 1
+size = Vector2i(156, 100)
+item_count = 2
+item_0/text = "Github页面"
+item_0/id = 0
+item_1/text = "关于此程序"
+item_1/id = 1
+
+[node name="DenominatorModifier" type="Node" parent="."]
+script = ExtResource("13_74j0u")
+
+[node name="Label" type="Label" parent="DenominatorModifier"]
+offset_left = 1.0
+offset_top = 8.0
+offset_right = 114.0
+offset_bottom = 31.0
+text = "格线细分="
+
+[node name="LineEdit" type="LineEdit" parent="DenominatorModifier"]
+offset_left = 81.0
+offset_top = 6.0
+offset_right = 150.0
+offset_bottom = 37.0
+text = "4"
+alignment = 1
+
+[node name="BarTeleportation" type="Node" parent="."]
+script = ExtResource("14_sdh1e")
+
+[node name="Label" type="Label" parent="BarTeleportation"]
+offset_left = 1.0
+offset_top = 53.0
+offset_right = 86.0
+offset_bottom = 76.0
+text = "传送到小节:"
+
+[node name="LineEdit" type="LineEdit" parent="BarTeleportation"]
+offset_left = 94.0
+offset_top = 51.0
+offset_right = 162.563
+offset_bottom = 82.0
+text = "0"
+alignment = 1
+
+[node name="Button" type="Button" parent="BarTeleportation"]
+offset_left = 171.0
+offset_top = 51.0
+offset_right = 208.0
+offset_bottom = 82.0
+focus_mode = 0
+text = "GO!"
+
+[node name="NoteEdits" type="Node" parent="."]
+
+[node name="HitNotePanel" type="PanelContainer" parent="NoteEdits"]
+visible = false
+offset_left = 790.0
+offset_top = 52.0
+offset_right = 1152.0
+offset_bottom = 395.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_sdh1e")
+script = ExtResource("15_2w0at")
+
+[node name="HitNoteEditContainer" type="VBoxContainer" parent="NoteEdits/HitNotePanel"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NoteEdits/HitNotePanel/HitNoteEditContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "打击Note"
+horizontal_alignment = 1
+
+[node name="Position" type="Control" parent="NoteEdits/HitNotePanel/HitNoteEditContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NoteEdits/HitNotePanel/HitNoteEditContainer/Position"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 2.0
+offset_right = 84.0
+offset_bottom = 25.0
+text = "位置:"
+
+[node name="LineEdit" type="LineEdit" parent="NoteEdits/HitNotePanel/HitNoteEditContainer/Position"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = -1.0
+offset_right = 134.563
+offset_bottom = 30.0
+placeholder_text = "小节数"
+
+[node name="LineEdit2" type="LineEdit" parent="NoteEdits/HitNotePanel/HitNoteEditContainer/Position"]
+layout_mode = 0
+offset_left = 163.0
+offset_top = -1.0
+offset_right = 308.0
+offset_bottom = 30.0
+placeholder_text = "分数"
+
+[node name="Label2" type="Label" parent="NoteEdits/HitNotePanel/HitNoteEditContainer/Position"]
+layout_mode = 0
+offset_left = 145.0
+offset_top = 3.0
+offset_right = 185.0
+offset_bottom = 26.0
+text = ":"
+
+[node name="Track" type="Control" parent="NoteEdits/HitNotePanel/HitNoteEditContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NoteEdits/HitNotePanel/HitNoteEditContainer/Track"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 2.0
+offset_right = 85.0
+offset_bottom = 25.0
+text = "轨道:"
+
+[node name="LineEdit" type="LineEdit" parent="NoteEdits/HitNotePanel/HitNoteEditContainer/Track"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = -1.0
+offset_right = 134.563
+offset_bottom = 30.0
+placeholder_text = "轨道"
+
+[node name="Count" type="Control" parent="NoteEdits/HitNotePanel/HitNoteEditContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NoteEdits/HitNotePanel/HitNoteEditContainer/Count"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 2.0
+offset_right = 84.0
+offset_bottom = 25.0
+text = "堆叠数:"
+
+[node name="LineEdit" type="LineEdit" parent="NoteEdits/HitNotePanel/HitNoteEditContainer/Count"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = -1.0
+offset_right = 148.563
+offset_bottom = 30.0
+placeholder_text = "堆叠"
+
+[node name="RemoveCount" type="Control" parent="NoteEdits/HitNotePanel/HitNoteEditContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NoteEdits/HitNotePanel/HitNoteEditContainer/RemoveCount"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 2.0
+offset_right = 135.0
+offset_bottom = 25.0
+text = "剔除数:"
+
+[node name="LineEdit" type="LineEdit" parent="NoteEdits/HitNotePanel/HitNoteEditContainer/RemoveCount"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = -1.0
+offset_right = 148.563
+offset_bottom = 30.0
+placeholder_text = "剔除"
+
+[node name="Scale" type="Control" parent="NoteEdits/HitNotePanel/HitNoteEditContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NoteEdits/HitNotePanel/HitNoteEditContainer/Scale"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 2.0
+offset_right = 83.0
+offset_bottom = 25.0
+text = "缩放:"
+
+[node name="LineEdit" type="LineEdit" parent="NoteEdits/HitNotePanel/HitNoteEditContainer/Scale"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = -1.0
+offset_right = 134.563
+offset_bottom = 30.0
+placeholder_text = "缩放"
+
+[node name="Color" type="Control" parent="NoteEdits/HitNotePanel/HitNoteEditContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NoteEdits/HitNotePanel/HitNoteEditContainer/Color"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 2.0
+offset_right = 83.0
+offset_bottom = 25.0
+text = "颜色/种类:"
+
+[node name="LineEdit" type="OptionButton" parent="NoteEdits/HitNotePanel/HitNoteEditContainer/Color"]
+layout_mode = 0
+offset_left = 102.0
+offset_top = -5.0
+offset_right = 269.0
+offset_bottom = 33.0
+focus_mode = 0
+item_count = 3
+popup/item_0/text = "普通"
+popup/item_0/icon = ExtResource("16_0u1f5")
+popup/item_0/id = 0
+popup/item_1/text = "绝赞"
+popup/item_1/icon = ExtResource("17_8g6du")
+popup/item_1/id = 1
+popup/item_2/text = "表演"
+popup/item_2/icon = ExtResource("13_6lm8n")
+popup/item_2/id = 2
+
+[node name="YOffset" type="Control" parent="NoteEdits/HitNotePanel/HitNoteEditContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NoteEdits/HitNotePanel/HitNoteEditContainer/YOffset"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 2.0
+offset_right = 84.0
+offset_bottom = 25.0
+text = "Y轴偏移量:"
+
+[node name="LineEdit" type="LineEdit" parent="NoteEdits/HitNotePanel/HitNoteEditContainer/YOffset"]
+layout_mode = 0
+offset_left = 102.0
+offset_top = -1.0
+offset_right = 170.563
+offset_bottom = 30.0
+placeholder_text = "Y偏移"
+
+[node name="CameraNotePanel" type="PanelContainer" parent="NoteEdits"]
+visible = false
+offset_left = 790.0
+offset_top = 52.0
+offset_right = 1152.0
+offset_bottom = 375.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_sdh1e")
+script = ExtResource("13_k1sck")
+
+[node name="CameraNoteEditContainer" type="VBoxContainer" parent="NoteEdits/CameraNotePanel"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NoteEdits/CameraNotePanel/CameraNoteEditContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "相机运动Note"
+horizontal_alignment = 1
+
+[node name="Begin" type="Control" parent="NoteEdits/CameraNotePanel/CameraNoteEditContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NoteEdits/CameraNotePanel/CameraNoteEditContainer/Begin"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 2.0
+offset_right = 84.0
+offset_bottom = 25.0
+text = "起点:"
+
+[node name="LineEdit" type="LineEdit" parent="NoteEdits/CameraNotePanel/CameraNoteEditContainer/Begin"]
+layout_mode = 0
+offset_left = 67.0
+offset_top = -1.0
+offset_right = 135.563
+offset_bottom = 30.0
+placeholder_text = "小节数"
+
+[node name="LineEdit2" type="LineEdit" parent="NoteEdits/CameraNotePanel/CameraNoteEditContainer/Begin"]
+layout_mode = 0
+offset_left = 164.0
+offset_top = -1.0
+offset_right = 309.0
+offset_bottom = 30.0
+placeholder_text = "分数"
+
+[node name="Label2" type="Label" parent="NoteEdits/CameraNotePanel/CameraNoteEditContainer/Begin"]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 3.0
+offset_right = 186.0
+offset_bottom = 26.0
+text = ":"
+
+[node name="End" type="Control" parent="NoteEdits/CameraNotePanel/CameraNoteEditContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NoteEdits/CameraNotePanel/CameraNoteEditContainer/End"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 2.0
+offset_right = 84.0
+offset_bottom = 25.0
+text = "终点:"
+
+[node name="LineEdit" type="LineEdit" parent="NoteEdits/CameraNotePanel/CameraNoteEditContainer/End"]
+layout_mode = 0
+offset_left = 67.0
+offset_top = -1.0
+offset_right = 135.563
+offset_bottom = 30.0
+placeholder_text = "小节数"
+
+[node name="LineEdit2" type="LineEdit" parent="NoteEdits/CameraNotePanel/CameraNoteEditContainer/End"]
+layout_mode = 0
+offset_left = 164.0
+offset_top = -1.0
+offset_right = 309.0
+offset_bottom = 30.0
+placeholder_text = "分数"
+
+[node name="Label2" type="Label" parent="NoteEdits/CameraNotePanel/CameraNoteEditContainer/End"]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 3.0
+offset_right = 186.0
+offset_bottom = 26.0
+text = ":"
+
+[node name="Duration" type="Control" parent="NoteEdits/CameraNotePanel/CameraNoteEditContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NoteEdits/CameraNotePanel/CameraNoteEditContainer/Duration"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 2.0
+offset_right = 84.0
+offset_bottom = 25.0
+text = "持续时间:"
+
+[node name="LineEdit" type="LineEdit" parent="NoteEdits/CameraNotePanel/CameraNoteEditContainer/Duration"]
+layout_mode = 0
+offset_left = 98.0
+offset_top = -1.0
+offset_right = 166.563
+offset_bottom = 30.0
+placeholder_text = "小节数"
+
+[node name="LineEdit2" type="LineEdit" parent="NoteEdits/CameraNotePanel/CameraNoteEditContainer/Duration"]
+layout_mode = 0
+offset_left = 195.0
+offset_top = -1.0
+offset_right = 340.0
+offset_bottom = 30.0
+placeholder_text = "分数"
+
+[node name="Label2" type="Label" parent="NoteEdits/CameraNotePanel/CameraNoteEditContainer/Duration"]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 3.0
+offset_right = 217.0
+offset_bottom = 26.0
+text = ":"
+
+[node name="Easing" type="Control" parent="NoteEdits/CameraNotePanel/CameraNoteEditContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NoteEdits/CameraNotePanel/CameraNoteEditContainer/Easing"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 2.0
+offset_right = 83.0
+offset_bottom = 25.0
+text = "缓动:"
+
+[node name="LineEdit" type="OptionButton" parent="NoteEdits/CameraNotePanel/CameraNoteEditContainer/Easing"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = -3.0
+offset_right = 185.0
+offset_bottom = 35.0
+focus_mode = 0
+item_count = 1
+popup/item_0/id = 0
+
+[node name="CurveDrawer" type="ColorRect" parent="NoteEdits/CameraNotePanel/CameraNoteEditContainer/Easing"]
+layout_mode = 0
+offset_left = 209.0
+offset_top = -6.0
+offset_right = 249.0
+offset_bottom = 34.0
+scale = Vector2(0.997204, 0.991444)
+color = Color(1, 1, 1, 0.0980392)
+script = ExtResource("14_1abrv")
+
+[node name="PositionMovement" type="Control" parent="NoteEdits/CameraNotePanel/CameraNoteEditContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NoteEdits/CameraNotePanel/CameraNoteEditContainer/PositionMovement"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 2.0
+offset_right = 163.0
+offset_bottom = 25.0
+text = "位置动量:"
+
+[node name="LineEdit" type="LineEdit" parent="NoteEdits/CameraNotePanel/CameraNoteEditContainer/PositionMovement"]
+layout_mode = 0
+offset_left = 124.0
+offset_top = -1.0
+offset_right = 193.0
+offset_bottom = 30.0
+placeholder_text = "X"
+
+[node name="LineEdit2" type="LineEdit" parent="NoteEdits/CameraNotePanel/CameraNoteEditContainer/PositionMovement"]
+layout_mode = 0
+offset_left = 203.0
+offset_top = -1.0
+offset_right = 271.563
+offset_bottom = 30.0
+placeholder_text = "Y"
+
+[node name="LineEdit3" type="LineEdit" parent="NoteEdits/CameraNotePanel/CameraNoteEditContainer/PositionMovement"]
+layout_mode = 0
+offset_left = 279.0
+offset_top = -1.0
+offset_right = 347.563
+offset_bottom = 30.0
+placeholder_text = "Z"
+
+[node name="RotationMovement" type="Control" parent="NoteEdits/CameraNotePanel/CameraNoteEditContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NoteEdits/CameraNotePanel/CameraNoteEditContainer/RotationMovement"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 2.0
+offset_right = 163.0
+offset_bottom = 25.0
+text = "角度动量 (度):"
+
+[node name="LineEdit" type="LineEdit" parent="NoteEdits/CameraNotePanel/CameraNoteEditContainer/RotationMovement"]
+layout_mode = 0
+offset_left = 124.0
+offset_top = -1.0
+offset_right = 193.0
+offset_bottom = 30.0
+placeholder_text = "X"
+
+[node name="LineEdit2" type="LineEdit" parent="NoteEdits/CameraNotePanel/CameraNoteEditContainer/RotationMovement"]
+layout_mode = 0
+offset_left = 203.0
+offset_top = -1.0
+offset_right = 271.563
+offset_bottom = 30.0
+placeholder_text = "Y"
+
+[node name="LineEdit3" type="LineEdit" parent="NoteEdits/CameraNotePanel/CameraNoteEditContainer/RotationMovement"]
+layout_mode = 0
+offset_left = 279.0
+offset_top = -1.0
+offset_right = 347.563
+offset_bottom = 30.0
+placeholder_text = "Z"
+
+[node name="BPMNotePanel" type="PanelContainer" parent="NoteEdits"]
+visible = false
+offset_left = 790.0
+offset_top = 52.0
+offset_right = 1152.0
+offset_bottom = 188.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_sdh1e")
+script = ExtResource("18_aa8l6")
+
+[node name="BPMNoteEditContainer" type="VBoxContainer" parent="NoteEdits/BPMNotePanel"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NoteEdits/BPMNotePanel/BPMNoteEditContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "BPM变化Note"
+horizontal_alignment = 1
+
+[node name="Position" type="Control" parent="NoteEdits/BPMNotePanel/BPMNoteEditContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NoteEdits/BPMNotePanel/BPMNoteEditContainer/Position"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 2.0
+offset_right = 84.0
+offset_bottom = 25.0
+text = "位置:"
+
+[node name="LineEdit" type="LineEdit" parent="NoteEdits/BPMNotePanel/BPMNoteEditContainer/Position"]
+layout_mode = 0
+offset_left = 61.0
+offset_top = -1.0
+offset_right = 129.563
+offset_bottom = 30.0
+placeholder_text = "小节数"
+
+[node name="LineEdit2" type="LineEdit" parent="NoteEdits/BPMNotePanel/BPMNoteEditContainer/Position"]
+layout_mode = 0
+offset_left = 158.0
+offset_top = -1.0
+offset_right = 303.0
+offset_bottom = 30.0
+placeholder_text = "分数"
+
+[node name="Label2" type="Label" parent="NoteEdits/BPMNotePanel/BPMNoteEditContainer/Position"]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 3.0
+offset_right = 180.0
+offset_bottom = 26.0
+text = ":"
+
+[node name="BPMValue" type="Control" parent="NoteEdits/BPMNotePanel/BPMNoteEditContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NoteEdits/BPMNotePanel/BPMNoteEditContainer/BPMValue"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 2.0
+offset_right = 83.0
+offset_bottom = 25.0
+text = "BPM变化为:"
+
+[node name="LineEdit" type="LineEdit" parent="NoteEdits/BPMNotePanel/BPMNoteEditContainer/BPMValue"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = -1.0
+offset_right = 202.0
+offset_bottom = 30.0
+placeholder_text = "BPM值"
+
+[node name="BKGNotePanel" type="PanelContainer" parent="NoteEdits"]
+visible = false
+offset_left = 790.0
+offset_top = 52.0
+offset_right = 1152.0
+offset_bottom = 135.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_sdh1e")
+script = ExtResource("19_k1sck")
+
+[node name="BKGNoteEditContainer" type="VBoxContainer" parent="NoteEdits/BKGNotePanel"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NoteEdits/BKGNotePanel/BKGNoteEditContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "背景显隐切换Note"
+horizontal_alignment = 1
+
+[node name="Position" type="Control" parent="NoteEdits/BKGNotePanel/BKGNoteEditContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NoteEdits/BKGNotePanel/BKGNoteEditContainer/Position"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 2.0
+offset_right = 84.0
+offset_bottom = 25.0
+text = "位置:"
+
+[node name="LineEdit" type="LineEdit" parent="NoteEdits/BKGNotePanel/BKGNoteEditContainer/Position"]
+layout_mode = 0
+offset_left = 62.0
+offset_top = -1.0
+offset_right = 130.563
+offset_bottom = 30.0
+placeholder_text = "小节数"
+
+[node name="LineEdit2" type="LineEdit" parent="NoteEdits/BKGNotePanel/BKGNoteEditContainer/Position"]
+layout_mode = 0
+offset_left = 159.0
+offset_top = -1.0
+offset_right = 304.0
+offset_bottom = 30.0
+placeholder_text = "分数"
+
+[node name="Label2" type="Label" parent="NoteEdits/BKGNotePanel/BKGNoteEditContainer/Position"]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 3.0
+offset_right = 181.0
+offset_bottom = 26.0
+text = ":"
+
+[node name="DefaultPanel" type="PanelContainer" parent="NoteEdits"]
+offset_left = 790.0
+offset_top = 52.0
+offset_right = 1152.0
+offset_bottom = 129.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_sdh1e")
+
+[node name="BKGNoteEditContainer" type="VBoxContainer" parent="NoteEdits/DefaultPanel"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NoteEdits/DefaultPanel/BKGNoteEditContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "-Note编辑-"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="NoteEdits/DefaultPanel/BKGNoteEditContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.589096, 0.589096, 0.589096, 1)
+text = "请选择一个Note..."
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="NoteEdits/DefaultPanel"]
+position = Vector2(24, 35)
+texture = ExtResource("16_0u1f5")
+
+[node name="Sprite2D2" type="Sprite2D" parent="NoteEdits/DefaultPanel"]
+position = Vector2(336, 35)
+texture = ExtResource("16_0u1f5")
+
+[node name="NoteEditManager" type="Node" parent="NoteEdits"]
+script = ExtResource("16_5tdu1")
+
+[node name="Managers" type="Node" parent="."]
+
+[node name="InputManager" type="Node" parent="Managers"]
+script = ExtResource("3_ba0ut")
+
+[node name="SyncTimeSystem" type="Node" parent="Managers"]
+script = ExtResource("8_o435n")
+
+[node name="TipManager" type="Node" parent="Managers"]
+script = ExtResource("18_8g6du")
+
+[node name="AudioSettings" type="Node" parent="."]
+script = ExtResource("19_aa8l6")
+
+[node name="BKG" type="ColorRect" parent="AudioSettings"]
+offset_left = -5.0
+offset_top = 211.0
+offset_right = 294.0
+offset_bottom = 418.0
+color = Color(0, 0, 0, 0.419608)
+
+[node name="BGMRate" type="Node" parent="AudioSettings"]
+
+[node name="Label" type="Label" parent="AudioSettings/BGMRate"]
+offset_left = 22.0
+offset_top = 222.0
+offset_right = 174.0
+offset_bottom = 245.0
+text = "BGM速度 (%)"
+
+[node name="LineEdit" type="LineEdit" parent="AudioSettings/BGMRate"]
+offset_left = 167.0
+offset_top = 243.0
+offset_right = 235.563
+offset_bottom = 274.0
+text = "100"
+
+[node name="HScrollBar" type="HScrollBar" parent="AudioSettings/BGMRate"]
+offset_left = 21.0
+offset_top = 248.0
+offset_right = 161.0
+offset_bottom = 268.0
+min_value = 25.0
+max_value = 200.0
+value = 100.0
+
+[node name="Button" type="Button" parent="AudioSettings/BGMRate"]
+offset_left = 247.0
+offset_top = 246.0
+offset_right = 272.0
+offset_bottom = 271.0
+focus_mode = 0
+icon = ExtResource("20_k1sck")
+expand_icon = true
+
+[node name="BGMVolume" type="Node" parent="AudioSettings"]
+
+[node name="Label" type="Label" parent="AudioSettings/BGMVolume"]
+offset_left = 23.0
+offset_top = 284.0
+offset_right = 124.0
+offset_bottom = 307.0
+text = "BGM音量"
+
+[node name="LineEdit" type="LineEdit" parent="AudioSettings/BGMVolume"]
+offset_left = 167.0
+offset_top = 305.0
+offset_right = 235.563
+offset_bottom = 336.0
+text = "1"
+
+[node name="HScrollBar" type="HScrollBar" parent="AudioSettings/BGMVolume"]
+offset_left = 21.0
+offset_top = 310.0
+offset_right = 161.0
+offset_bottom = 330.0
+max_value = 2.0
+value = 1.0
+
+[node name="Button" type="Button" parent="AudioSettings/BGMVolume"]
+offset_left = 247.0
+offset_top = 308.0
+offset_right = 272.0
+offset_bottom = 333.0
+focus_mode = 0
+icon = ExtResource("20_k1sck")
+expand_icon = true
+
+[node name="SEVolume" type="Node" parent="AudioSettings"]
+
+[node name="Label" type="Label" parent="AudioSettings/SEVolume"]
+offset_left = 23.0
+offset_top = 350.0
+offset_right = 154.0
+offset_bottom = 373.0
+text = "打击音效音量"
+
+[node name="LineEdit" type="LineEdit" parent="AudioSettings/SEVolume"]
+offset_left = 167.0
+offset_top = 371.0
+offset_right = 235.563
+offset_bottom = 402.0
+text = "1"
+
+[node name="HScrollBar" type="HScrollBar" parent="AudioSettings/SEVolume"]
+offset_left = 21.0
+offset_top = 376.0
+offset_right = 161.0
+offset_bottom = 396.0
+max_value = 2.0
+value = 1.0
+
+[node name="Button" type="Button" parent="AudioSettings/SEVolume"]
+offset_left = 247.0
+offset_top = 374.0
+offset_right = 272.0
+offset_bottom = 399.0
+focus_mode = 0
+icon = ExtResource("20_k1sck")
+expand_icon = true
+
+[node name="TrackLabels" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="TrackLabels"]
+offset_left = 392.0
+offset_top = 613.0
+offset_right = 444.0
+offset_bottom = 636.0
+text = "Track1"
+
+[node name="Label2" type="Label" parent="TrackLabels"]
+offset_left = 463.0
+offset_top = 613.0
+offset_right = 515.0
+offset_bottom = 636.0
+text = "Track2"
+
+[node name="Label3" type="Label" parent="TrackLabels"]
+offset_left = 533.0
+offset_top = 613.0
+offset_right = 585.0
+offset_bottom = 636.0
+text = "Track3"
+
+[node name="Label4" type="Label" parent="TrackLabels"]
+offset_left = 611.0
+offset_top = 613.0
+offset_right = 666.0
+offset_bottom = 636.0
+text = "Effect"
+
+[node name="EffectNoteSelection" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("22_bn54a")
+
+[node name="ColorRect" type="ColorRect" parent="EffectNoteSelection"]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 91.0
+offset_right = 309.0
+offset_bottom = 199.0
+color = Color(0, 0, 0, 0.419608)
+
+[node name="Label2" type="Label" parent="EffectNoteSelection"]
+layout_mode = 0
+offset_left = 114.0
+offset_top = 92.0
+offset_right = 245.0
+offset_bottom = 115.0
+text = "特效音符"
+
+[node name="BPMButton" type="Button" parent="EffectNoteSelection"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 116.0
+offset_right = 80.0
+offset_bottom = 186.0
+pivot_offset = Vector2(35, 35)
+focus_mode = 0
+icon = ExtResource("22_fce0a")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("23_7msgv")
+
+[node name="Sprite2D" type="Sprite2D" parent="EffectNoteSelection/BPMButton"]
+position = Vector2(57, 56)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_bn54a")
+
+[node name="BKGButton" type="Button" parent="EffectNoteSelection"]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 116.0
+offset_right = 183.0
+offset_bottom = 186.0
+pivot_offset = Vector2(35, 35)
+focus_mode = 0
+icon = ExtResource("23_m12ww")
+flat = true
+expand_icon = true
+script = ExtResource("23_7msgv")
+
+[node name="Sprite2D" type="Sprite2D" parent="EffectNoteSelection/BKGButton"]
+visible = false
+position = Vector2(57, 56)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_bn54a")
+
+[node name="CameraButton" type="Button" parent="EffectNoteSelection"]
+layout_mode = 0
+offset_left = 219.0
+offset_top = 116.0
+offset_right = 289.0
+offset_bottom = 186.0
+pivot_offset = Vector2(35, 35)
+focus_mode = 0
+icon = ExtResource("24_7msgv")
+flat = true
+expand_icon = true
+script = ExtResource("23_7msgv")
+
+[node name="Sprite2D" type="Sprite2D" parent="EffectNoteSelection/CameraButton"]
+visible = false
+position = Vector2(57, 56)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_bn54a")

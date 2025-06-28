@@ -1,0 +1,83 @@
+[gd_scene load_steps=7 format=3 uid="uid://p0epn8s6615"]
+
+[ext_resource type="Texture2D" uid="uid://c5u02xvtoh7yf" path="res://img/Icons/Icon.png" id="1_tmso8"]
+[ext_resource type="Texture2D" uid="uid://dy0a3to5bin6p" path="res://img/Serika.png" id="2_aw6pp"]
+[ext_resource type="Script" uid="uid://c1i15u2sjbxty" path="res://scripts/SP/Serika.cs" id="3_aw6pp"]
+[ext_resource type="Texture2D" uid="uid://duasb8vwa36nx" path="res://img/OsageChan.png" id="4_mfboy"]
+[ext_resource type="AudioStream" uid="uid://bxh0gwu35enni" path="res://sounds/click.wav" id="4_uru6g"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_aw6pp"]
+font_size = 25
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[node name="AboutDialog" type="AcceptDialog"]
+title = "关于此程序"
+position = Vector2i(0, 36)
+size = Vector2i(500, 320)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 492.0
+offset_bottom = 271.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Control"]
+position = Vector2(107, 22)
+scale = Vector2(0.234375, 0.234375)
+texture = ExtResource("1_tmso8")
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 157.0
+offset_top = 11.0
+offset_right = 374.0
+offset_bottom = 46.0
+theme_override_font_sizes/font_size = 25
+text = "Rock Chart Editor "
+label_settings = SubResource("LabelSettings_aw6pp")
+
+[node name="Label2" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 65.0
+offset_right = 480.0
+offset_bottom = 194.0
+bbcode_enabled = true
+text = "是为 [outline_size=8]坏枪[/outline_size] 先生的游戏《石墩子快跑》音游模式而制作的非官方谱面编辑器。
+您可以在这个编辑器内编辑或阅读石墩子谱面。
+祝您使用愉快！"
+autowrap_mode = 2
+
+[node name="Label3" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 173.0
+offset_right = 253.0
+offset_bottom = 269.0
+bbcode_enabled = true
+text = "[outline_size=5][rainbow freq=0.15 sat=3,val=1]程序设计:Flowzy
+程序协力&应用测试:Crack
+特别致谢:Crack
+//TODO:抱住Crack好好揉一揉[/rainbow][/outline_size]
+"
+
+[node name="Serika" type="Sprite2D" parent="Control" node_paths=PackedStringArray("click_sound_player")]
+position = Vector2(317, 265)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_aw6pp")
+script = ExtResource("3_aw6pp")
+click_sound_player = NodePath("../../ClickSoundPlayer")
+
+[node name="OsageChan" type="Sprite2D" parent="Control" node_paths=PackedStringArray("click_sound_player")]
+position = Vector2(427, 266)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("4_mfboy")
+script = ExtResource("3_aw6pp")
+click_sound_player = NodePath("../../ClickSoundPlayer")
+
+[node name="ClickSoundPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_uru6g")
+volume_db = -5.0

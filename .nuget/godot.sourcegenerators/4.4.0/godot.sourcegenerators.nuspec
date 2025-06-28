@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Godot.SourceGenerators</id>
+    <version>4.4.0</version>
+    <authors>Godot Engine contributors</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <projectUrl>https://github.com/godotengine/godot/tree/master/modules/mono/editor/Godot.NET.Sdk/Godot.SourceGenerators</projectUrl>
+    <description>Core C# source generator for Godot projects.</description>
+    <copyright>Copyright (c) Godot Engine contributors</copyright>
+    <repository type="git" url="https://github.com/godotengine/godot/tree/master/modules/mono/editor/Godot.NET.Sdk/Godot.SourceGenerators" commit="4c311cbee68c0b66ff8ebb8b0defdd9979dd2a41" />
+  </metadata>
+</package>

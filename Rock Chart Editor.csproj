@@ -1,0 +1,14 @@
+<Project Sdk="Godot.NET.Sdk/4.4.0">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <RootNamespace>RockChartEditor</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="NAudio" Version="2.2.1" />
+  </ItemGroup>
+  <ItemGroup>
+	  <Reference Include="NAudio" Version="2.2.1"
+			 HintPath="$(ProjectDir)/.nuget/naudio/2.2.1/lib/netstandard2.0/NAudio.dll" />
+  </ItemGroup>
+</Project>
